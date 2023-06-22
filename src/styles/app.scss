@@ -1,3 +1,6 @@
+$teal: #2999b0;
+$midnight-purple: #3c0074;
+
 @mixin flex-center-column {
   display: flex;
   flex-direction: column;
@@ -71,24 +74,24 @@ body {
   .header-item {
     text-align: center;
     font-size: 2em;
-    margin: 3% 0;
+    margin-top: 3%;
   }
 
   .page {
     position: absolute;
     top: 50%;
-    left: 4.4%;
+    left: 8.4%;
     font-size: 20px;
   }
 
   .image-wrapper {
     @include flex-center;
     gap: 5%;
-    height: 30em;
+    height: 32em;
 
     img {
       background-color: #2999b0;
-      width: 60%;
+      width: 49%;
       border: 2px solid #3c0074;
       padding: 11px;
       border-radius: 10px;
@@ -112,6 +115,11 @@ body {
     &:hover {
       color: gray;
     }
+  }
+
+  .custom-active-class {
+    text-decoration: underline;
+    color: purple;
   }
 }
 

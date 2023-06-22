@@ -33,6 +33,8 @@ function App() {
       <div className="home-container">
         <div className="header">{customHeader}</div>
 
+        <FontAwesomeIcon icon="fa-solid fa-spinner" spin={faSpock} size="5x" />
+
         <div className="hand-wrapper">
           <FontAwesomeIcon
             icon={`fa-solid fa-${faSpock ? "hand-spock" : "hand"}`}
