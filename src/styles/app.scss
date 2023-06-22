@@ -1,0 +1,163 @@
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 62.5%;
+}
+
+.app-container {
+  height: 100vh;
+  padding-right: 10px;
+}
+
+.gallery-form-container {
+  .header {
+    font-size: 3.2em;
+    text-align: center;
+    margin-top: 3%;
+  }
+
+  .buttons-wrapper {
+    @include flex-center;
+    gap: 3%;
+    height: 6em;
+
+    .pagination-btn {
+      cursor: pointer;
+
+      svg {
+        font-size: 1em;
+        padding: 10px;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+
+    .page-btn {
+      border: 1px solid black;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 2em;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lightgray;
+        border-color: gray;
+      }
+    }
+
+    .active {
+      color: #fff;
+      background-color: #2999b0;
+    }
+  }
+}
+
+.gallery-item-container {
+  .header-item {
+    text-align: center;
+    font-size: 2em;
+    margin: 3% 0;
+  }
+
+  .page {
+    position: absolute;
+    top: 50%;
+    left: 4.4%;
+    font-size: 20px;
+  }
+
+  .image-wrapper {
+    @include flex-center;
+    gap: 5%;
+    height: 30em;
+
+    img {
+      background-color: #2999b0;
+      width: 60%;
+      border: 2px solid #3c0074;
+      padding: 11px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  height: 10%;
+
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: gray;
+    }
+  }
+}
+
+.gallery-container {
+  @include flex-center;
+  height: 22%;
+
+  .gallery-btn {
+    font-size: 2.5em;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lightgray;
+      border-color: gray;
+    }
+  }
+
+  .image-data-wrapper {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
+
+.home-container {
+  @include flex-center-column;
+  height: 50%;
+  justify-content: space-around;
+
+  .header {
+    font-size: 4em;
+  }
+
+  .hand-wrapper {
+    @include flex-center-column;
+    gap: 5px;
+
+    svg {
+      font-size: 10em;
+    }
+
+    .spock-message {
+      font-size: 2em;
+    }
+  }
+}
